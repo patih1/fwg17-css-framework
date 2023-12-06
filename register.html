@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <section class="flex ">
+    <div class="h-screen w-1/5 bg-cover bg-[url('asset/img/Register.png')]">
+        
+    </div>
+
+    <div class="flex-1 flex flex-col items-center justify-center gap-4">
+      <div class="w-4/5">  
+        <img src="asset/img/Logo.png" alt="" class="logo">
+      </div>
+      
+      <div class="w-4/5">
+        <h1 class="text-xl text-[#8E6447] font-semibold">Register</h1>
+        <p class="font-normal text-gray-600">Fill out the form correctly</p>
+      </div>
+      
+      <form class="flex flex-col w-4/5 gap-4">
+
+        <div class="flex flex-col">
+          <label class="font-semibold" for="fullName">Full Name</label>
+          <input class="h-9 border px-5 rounded" type="text" name="fullName" id="fullName" placeholder="Enter Your Full Name">
+        </div>
+
+        <div class="flex flex-col">
+          <label class="font-semibold" for="email">Email</label>
+          <input class="h-9 border px-5 rounded" type="email" name="email" id="email" placeholder="Enter Your Email">
+        </div>
+
+        <div class="flex flex-col">
+          <label class="font-semibold" for="password">Password</label>
+          <input class="h-9 border px-5 rounded" type="password" name="password" id="password" placeholder="Enter Your Password">
+        </div>
+
+        <div class="flex flex-col">
+          <label class="font-semibold" for="confirmPassword">Confirm Password</label>
+          <input class="h-9 border px-5 rounded" type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter Your Password Again">
+        </div>
+
+        <div>
+          <button class="w-full bg-[#FF8906] h-10 mt-4 rounded" type="submit">Register</button>
+        </div>
+
+        
+      </form>
+
+      <div class="w-4/5">
+        <div class="w-full items-center justify-center flex flex-col">
+          <p>Have An Account? <a href="login.html" class="text-[#FF8906]">Login</a></p>
+          <p class="text-[#AAA]">or</p>
+        </div>
+      </div>
+
+      <div class="w-4/5 flex gap-4">
+
+        <button class="flex gap-3 justify-center bg-white shadow-md items-center w-2/4 h-14 rounded"><img class="w-8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFqDwdp9Qvsf4FK_hEwhruVRAW5qLRvaWtow&usqp=CAU" alt="">Facebook</button>
+        <button class="flex gap-3 justify-center bg-white shadow-md items-center w-2/4 h-14 rounded"><img class="w-8" src="https://storage.googleapis.com/support-kms-prod/ZAl1gIwyUsvfwxoW9ns47iJFioHXODBbIkrK" alt="google logo">Google</button>
+      
+      </div>
+      
+    </div>
+  </section>
+
+</body>
+</html>
