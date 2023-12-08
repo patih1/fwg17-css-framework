@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <nav class="bg-black flex flex-col md:flex-row text-white p-4 w-full">
+    
+    <div class="flex items-center flex-1 mx-20 gap-10">
+      <a href="" class="flex items-center gap-3"><img src="asset/Icon/Logo.svg" alt="">Coffe Shop</a>
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+    </div>
+
+    <div class="flex items-center flex-1 justify-end mx-20 gap-10">
+      <i data-feather="search"></i>
+      <i data-feather="shopping-cart"></i>
+      <button class="border border-white px-5 py-2 rounded">Sign In</button>
+      <button class="border border-orange-500 bg-orange-500 px-5 py-2 rounded text-black">Sign Up</button>
+    </div>
+  </nav>
+
+  <header class="flex flex-col-reverse md:flex-row">
+    
+    <div class="flex-1 min-h-screen flex items-center justify-center">
+
+      <div class="w-full h-5/6 text-white flex flex-col items-end gap-5">
+        <div class="w-8/12 h-4/5 bg-[url(asset/img/card1.png)] bg-cover bg-center"></div>
+        <div class="w-8/12 h-1/3 flex gap-4">
+          <div class="w-1/3 h-full bg-[url(asset/img/card2.png)] bg-cover bg-center"></div>
+          <div class="w-1/3 h-full bg-[url(asset/img/card3.png)] bg-cover bg-center"></div>
+          <div class="w-1/3 h-full bg-[url(asset/img/card4.jpeg)] bg-cover bg-center"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="flex-1 bg-cover min-h-screen flex items-center">
+      <div class="ml-6 w-9/12 h-5/6 flex flex-col gap-5">
+        <div class="w-32 h-10 bg-red-500 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+        <h1 class="text-5xl">Hazelnut Latte</h1>
+        <div class="flex gap-3 items-center">
+          <p class="text-red-500 line-through text-sm">IDR 10.000</p>
+          <p class="text-xl text-orange-500">IDR 20.000</p>
+        </div>
+
+        <div class="flex gap-3">
+          <i data-feather="star" class="text-orange-500"></i>
+          <i data-feather="star" class="text-orange-500"></i>
+          <i data-feather="star" class="text-orange-500"></i>
+          <i data-feather="star" class="text-orange-500"></i>
+          <i data-feather="star" class="text-orange-500"></i>
+          <p>5.0</p>
+        </div>
+        
+        <div>
+          <p></p>
+          <i></i>
+        </div>
+
+        <p>Cold brewing is a method of brewing that combines ground coffee and cool<br>
+          water and uses time instead of heat to extract the flavor. It is brewed in small<br>
+          batches and steeped for as long as 48 hours.
+        </p>
+
+        <form action="">
+          <div class="flex">
+            <div class="flex w-6 h-6 items-center justify-center border border-orange-500">-</div>
+            <input type="number" name="quantity" id="quantity" class="w-6">
+            <div class="flex w-6 h-6 items-center justify-center border border-orange-500 bg-orange-500">+</div>
+          </div>
+
+          <div>
+            <p>Choose Size</p>
+            <div class="flex ">
+
+                <label for="regular" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Regular</label>
+                <input type="radio" name="regular" id="regular" class="opacity-0">
+              
+
+                <label for="medium" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Medium</label>
+                <input type="radio" name="medium" id="medium" class="opacity-0">
+              
+
+                <label for="large" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Large</label>
+                <input type="radio" name="large" id="large" class="opacity-0">
+                
+            </div>
+          </div>
+
+          <div>
+            <p>Hot/Ice?</p>
+            <div class="flex">
+
+                <label for="ice" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Ice</label>
+                <input type="radio" name="ice" id="ice" class="opacity-0">
+              
+                <label for="hot" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Hot</label>
+                <input type="radio" name="hot" id="hot" class="opacity-0">
+
+            </div>
+          </div>
+
+          <div class="flex gap-3">
+            <button type="submit" class="flex-1 border border-orange-500 mt-10 h-10 bg-orange-500 rounded">Buy</button>
+            <button type="submit" class="flex-1 border border-orange-500 mt-10 h-10 flex justify-center items-center text-orange-500 rounded gap-3"><i data-feather="shopping-cart" class=""></i>add to cart</button>
+          </div>
+
+        </form>
+        
+
+
+      </div>
+    </div>
+  
+  </header>
+
+  <section class="flex flex-col h-[100vh] flex items-center gap-10">
+    <div class="w-4/5">
+      <p class="text-5xl">Recommendation<span class="text-amber-100"> For You</span></p>
+    </div>
+
+    <div class="flex flex-col md:flex-row w-4/5 h-auto justify-between mb-60">
+
+      <div class="bg-[url(asset/img/card1.png)] h-[360px] w-[377px] bg-cover bg-center flex justify-center items-center">
+        <div class="absolute w-32 h-10 bg-red-500 mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+
+        <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
+          <div class="w-11/12">
+            <p class="text-2xl font-semibold">Hazelnut Latte</p>
+          </div>
+          <div class="w-11/12">
+            <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+          </div>
+
+          <div class="w-11/12 flex gap-3 items-center">
+            <div>
+              <p class="text-red-500 line-through">IDR 20.000</p>
+            </div>
+            <div>
+              <p class="text-2xl text-orange-500">IDR 20.000</p>
+            </div>
+          </div>
+          
+          <div class="w-11/12 h-1/6 flex gap-[5%]">
+            <button class="w-9/12 bg-orange-500 rounded">Buy</button>
+            <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[url(asset/img/card2.png)] h-[360px] w-[377px] bg-cover bg-center flex justify-center items-center">
+        <div class="absolute w-32 h-10 bg-red-500 mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+
+        <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
+          <div class="w-11/12">
+            <p class="text-2xl font-semibold">Hazelnut Latte</p>
+          </div>
+          <div class="w-11/12">
+            <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+          </div>
+
+          <div class="w-11/12 flex gap-3 items-center">
+            <div>
+              <p class="text-red-500 line-through">IDR 20.000</p>
+            </div>
+            <div>
+              <p class="text-2xl text-orange-500">IDR 20.000</p>
+            </div>
+          </div>
+
+          <div class="w-11/12 h-1/6 flex gap-[5%]">
+            <button class="w-9/12 bg-orange-500 rounded">Buy</button>
+            <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[url(asset/img/card3.png)] h-[360px] w-[377px] bg-cover bg-center flex justify-center items-center">
+        <div class="absolute w-32 h-10 bg-red-500 mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+
+        <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
+          <div class="w-11/12">
+            <p class="text-2xl font-semibold">Hazelnut Latte</p>
+          </div>
+          <div class="w-11/12">
+            <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+          </div>
+
+          <div class="w-11/12 flex gap-3 items-center">
+            <div>
+              <p class="text-red-500 line-through">IDR 20.000</p>
+            </div>
+            <div>
+              <p class="text-2xl text-orange-500">IDR 20.000</p>
+            </div>
+          </div>
+
+          <div class="w-11/12 h-1/6 flex gap-[5%]">
+            <button class="w-9/12 bg-orange-500 rounded">Buy</button>
+            <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    
+    <div class="flex gap-3">
+      <button class="w-10 h-10 bg-orange-500 rounded-full">1</button>
+      <button class="w-10 h-10 bg-[#F8F8F8] rounded-full">2</button>
+      <button class="w-10 h-10 bg-[#F8F8F8] rounded-full">3</button>
+      <button class="w-10 h-10 bg-[#F8F8F8] rounded-full">4</button>
+      <button class="w-10 h-10 bg-orange-500 rounded-full flex justify-center items-center"><i data-feather="arrow-right" class="text-white"></i></button>
+    </div>
+
+  </section>
+
+  <footer class="h-auto mt-20 py-4 px-28 bg-[#F8F8F8]">
+    <div class="w-4/5 h-auto my-20 flex gap-20">
+      
+      <div class="flex flex-col gap-10">
+        <div class="flex items-center">
+          <img src="asset/Icon/Logo.svg" alt="">
+          <p>Coffee Shop</p>
+        </div>
+        <p>Coffee Shop is a store that sells some good<br>meals, and especially coffee. We provide<br>high quality beans</p>
+        <p>©2020CoffeeStore</p>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <p class="font-semibold">Product</p>
+        <a href="">Our Product</a>
+        <a href="">Pricing</a>
+        <a href="">Locations</a>
+        <a href="">Countries</a>
+        <a href="">Blog</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <p class="font-semibold">Engage</p>
+        <a href="">Partner</a>
+        <a href="">FAQ</a>
+        <a href="">About Us</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms of Service</a>
+      </div>
+      <div class="gap-4 flex flex-col">
+        <p class="font-semibold">Social Media</p>
+        <div class="flex gap-4">
+          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
+          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
+          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
