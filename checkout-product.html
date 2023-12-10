@@ -26,16 +26,16 @@
   </nav>
 
   <header class="w-full flex justify-center my-8">
-    <h2 class="w-4/5">Payment Details</h2>
+    <h2 class="w-4/5 text-5xl">Payment Details</h2>
   </header>
 
   <section class="flex flex-col md:flex-row gap-3">
     <div class="flex-1 flex justify-end">
       <div class="w-4/5">
   
-        <div class="flex justify-between">
-          <p>Your Order</p>
-          <button>+ Add Menu</button>
+        <div class="flex justify-between items-center mb-3">
+          <p class="text-xl">Your Order</p>
+          <button class="bg-orange-500 h-8 w-2/12 rounded">+ Add Menu</button>
         </div>
 
         <div class="flex flex-col gap-3">
@@ -45,8 +45,8 @@
             <div class="bg-[url(asset/img/card1.png)] h-full w-3/12 bg-cover bg-center"></div>
             
             <div class="flex flex-col justify-evenly flex-1">
-              <div>FLASH SALE!</div>
-              <p>Hazelnut Latte</p>
+              <div class="w-24 h-7 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">FLASH SALE!</div>
+              <p class="font-semibold">Hazelnut Latte</p>
               <p>2pcs   |   Regular   |   Ice   |   Dine In</p>
               <div class="flex gap-3 items-center">
                 <p class="text-red-500 line-through text-sm">IDR 10.000</p>
@@ -63,8 +63,8 @@
             <div class="bg-[url(asset/img/card1.png)] h-full w-3/12 bg-cover bg-center"></div>
             
             <div class="flex flex-col justify-evenly flex-1">
-              <div>FLASH SALE!</div>
-              <p>Hazelnut Latte</p>
+              <div class="w-24 h-7 bg-red-500 rounded-full flex items-center justify-center text-white text-xs">FLASH SALE!</div>
+              <p class="font-semibold">Hazelnut Latte</p>
               <p>2pcs   |   Regular   |   Ice   |   Dine In</p>
               <div class="flex gap-3 items-center">
                 <p class="text-red-500 line-through text-sm">IDR 10.000</p>
@@ -78,47 +78,49 @@
         
         </div>
 
-        <div>
-          <p>Payment Info & Delivery</p>
-        </div>
-
-        <div>
-          <form action="">
-
-            <div class="flex flex-col">
-              <label class="font-semibold" for="email">Email</label>
-              <input class="h-9 border px-5 rounded" type="email" name="email" id="email" placeholder="Enter Your Email">
-            </div>
-            
-            <div class="flex flex-col">
-              <label class="font-semibold" for="fullName">Full Name</label>
-              <input class="h-9 border px-5 rounded" type="text" name="fullName" id="fullName" placeholder="Enter Your Full Name">
-            </div>
-    
-            <div class="flex flex-col">
-              <label class="font-semibold" for="address">Address</label>
-              <input class="h-9 border px-5 rounded" type="address" name="address" id="address" placeholder="Enter Your Address">
-            </div>
-
-            <div>
-              <p>Choose Size</p>
-              <div class="flex gap-3">
-
-                <label for="dine-in" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Dine In</label>
-                <input type="radio" name="dine-in" id="dine-in" class="hidden">
-              
-
-                <label for="door-delivery" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Door Delivery</label>
-                <input type="radio" name="door-delivery" id="door-delivery" class="hidden">
-              
-
-                <label for="pick-up" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Pick Up</label>
-                <input type="radio" name="pick-up" id="pick-up" class="hidden">
-                
+        <div class="flex flex-col gap-3">
+          <div>
+            <p class="text-2xl font-semibold">Payment Info & Delivery</p>
+          </div>
+  
+          <div>
+            <form action="" class="flex flex-col gap-4">
+  
+              <div class="flex flex-col">
+                <label class="font-semibold" for="email">Email</label>
+                <input class="h-9 border px-5 rounded" type="email" name="email" id="email" placeholder="Enter Your Email">
               </div>
-            </div>
-
-          </form>
+              
+              <div class="flex flex-col">
+                <label class="font-semibold" for="fullName">Full Name</label>
+                <input class="h-9 border px-5 rounded" type="text" name="fullName" id="fullName" placeholder="Enter Your Full Name">
+              </div>
+      
+              <div class="flex flex-col">
+                <label class="font-semibold" for="address">Address</label>
+                <input class="h-9 border px-5 rounded" type="address" name="address" id="address" placeholder="Enter Your Address">
+              </div>
+  
+              <div>
+                <p>Choose Size</p>
+                <div class="flex gap-3">
+  
+                  <label for="dine-in" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Dine In</label>
+                  <input type="radio" name="dine-in" id="dine-in" class="hidden">
+                
+  
+                  <label for="door-delivery" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Door Delivery</label>
+                  <input type="radio" name="door-delivery" id="door-delivery" class="hidden">
+                
+  
+                  <label for="pick-up" class="flex-1 flex justify-center border pl-4 hover:border-orange-500 h-8 items-center">Pick Up</label>
+                  <input type="radio" name="pick-up" id="pick-up" class="hidden">
+                  
+                </div>
+              </div>
+  
+            </form>
+          </div>
         </div>
 
       </div>
@@ -129,29 +131,34 @@
     <div class="flex-1">
 
       <div class="w-4/5 flex flex-col gap-4">
-        <p>Total</p>
+        <p class="text-xl">Total</p>
         <div class="flex flex-col gap-4">
           <div class="flex justify-between">
             <p>Order</p>
-            <p>Idr. 40.000</p>
+            <p class="font-semibold">Idr. 40.000</p>
           </div>
           <div class="flex justify-between">
             <p>Delivery</p>
-            <p>Idr. 0</p>
+            <p class="font-semibold">Idr. 0</p>
           </div>
           <div class="flex justify-between">
             <p>Tax</p>
-            <p>Idr. 4000</p>
+            <p class="font-semibold">Idr. 4000</p>
           </div>
           <hr>
           <div class="flex justify-between">
             <p>Sub Total</p>
-            <p>Idr.44.000</p>
+            <p class="font-semibold">Idr.44.000</p>
           </div>
           <button class="w-full bg-orange-500 h-8 rounded">Checkout</button>
           <p>We Accept</p>
-          <div>
-            <div class=""></div>
+          <div class="flex w-full justify-between">
+            <img src="https://i0.wp.com/febi.uinsaid.ac.id/wp-content/uploads/2020/11/Logo-BRI-Bank-Rakyat-Indonesia-PNG-Terbaru.png?ssl=1" class="w-9 max-h-9 object-contain"></img>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/2560px-Logo_dana_blue.svg.png" class="w-9 max-h-9 object-contain"></img>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png" class="w-9 max-h-9 object-contain"></img>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/1200px-Gopay_logo.svg.png" class="w-9 max-h-9 object-contain"></img>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/2560px-Logo_ovo_purple.svg.png" class="w-9 max-h-9 object-contain"></img>
+            <img src="https://cdn.pixabay.com/photo/2018/05/08/21/29/paypal-3384015_1280.png" class="w-9 max-h-9 object-contain"></img>
           </div>
           <p>*Get Discount if you pay with Bank Central Asia</p>
         </div>
