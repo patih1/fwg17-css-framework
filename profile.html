@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <nav class="bg-black flex flex-col md:flex-row text-white p-4 w-full">
+    
+    <div class="flex items-center flex-1 mx-20 gap-10">
+      <a href="" class="flex items-center gap-3"><img src="asset/Icon/Logo.svg" alt="">Coffe Shop</a>
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+    </div>
+
+    <div class="flex items-center flex-1 justify-end mx-20 gap-10">
+      <i data-feather="search"></i>
+      <i data-feather="shopping-cart"></i>
+      <button class="border border-white px-5 py-2 rounded">Sign In</button>
+      <button class="border border-orange-500 bg-orange-500 px-5 py-2 rounded text-black">Sign Up</button>
+    </div>
+  </nav>
+
+  <header class="w-full flex flex-col my-8 items-center">
+    <h2 class="w-4/5 text-5xl">Profile</h2>
+  </header>
+
+  <section class="flex flex-col md:flex-row gap-3 items-start">
+    
+    <div class="w-2/6 flex justify-end">
+
+      <div class="w-3/5 flex flex-col gap-4 border border-slate-300 items-center py-6">
+        <p>Ghaluh Wizard</p>
+        <p>ghaluhwizz@gmail.com</p>
+        <img class="w-28 h-28 rounded-full" src="https://image.winudf.com/v2/image1/bmV0LndsbHBwci5ib3lzX3Byb2ZpbGVfcGljdHVyZXNfc2NyZWVuXzBfMTY2NzUzNzYxN18wOTk/screen-0.webp?fakeurl=1&type=.webp" alt="">
+        <button>Upload New Photo</button>
+        <p>Since 20 January 2022</p>
+      </div>
+
+    </div>
+    
+    <div class="flex-1 flex flex-col justify-center gap-4 ">
+      
+      <form class="flex flex-col w-4/5 gap-4  border border-slate-300 p-6">
+
+        <div class="flex flex-col">
+          <label class="font-semibold" for="fullName">Full Name</label>
+          <input class="h-9 border px-5 rounded" type="text" name="fullName" id="fullName" placeholder="Ghaluh Wizard">
+        </div>
+
+        <div class="flex flex-col">
+          <label class="font-semibold" for="email">Email</label>
+          <input class="h-9 border px-5 rounded" type="email" name="email" id="email" placeholder="ghaluhwizz@gmail.com">
+        </div>
+
+        <div class="flex flex-col">
+          <label class="font-semibold" for="phone">Phone</label>
+          <input class="h-9 border px-5 rounded" type="phone" name="phone" id="phone" placeholder="082116304338">
+        </div>
+
+        <div class="flex flex-col">
+          <div class="flex justify-between">
+            <label class="font-semibold" for="password">Password</label>
+            <p>Set New Password</p> 
+          </div>
+          <input class="h-9 border px-5 rounded" type="password" name="password" id="password" placeholder="**********">
+        </div>
+
+        <div class="flex flex-col">
+          <label class="font-semibold" for="address">Address</label>
+          <input class="h-9 border px-5 rounded" type="password" name="address" id="address" placeholder="Griya Bandung Indah">
+        </div>
+
+        <div>
+          <button class="w-full bg-[#FF8906] h-10 mt-4 rounded" type="submit">Register</button>
+        </div>
+
+        
+      </form>
+      
+    </div>
+    
+  </section>
+
+  <footer class="h-auto mt-20 py-4 px-28 bg-[#F8F8F8]">
+    <div class="w-4/5 h-auto my-20 flex gap-20">
+      
+      <div class="flex flex-col gap-10">
+        <div class="flex items-center">
+          <img src="asset/Icon/Logo.svg" alt="">
+          <p>Coffee Shop</p>
+        </div>
+        <p>Coffee Shop is a store that sells some good<br>meals, and especially coffee. We provide<br>high quality beans</p>
+        <p>©2020CoffeeStore</p>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <p class="font-semibold">Product</p>
+        <a href="">Our Product</a>
+        <a href="">Pricing</a>
+        <a href="">Locations</a>
+        <a href="">Countries</a>
+        <a href="">Blog</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <p class="font-semibold">Engage</p>
+        <a href="">Partner</a>
+        <a href="">FAQ</a>
+        <a href="">About Us</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Terms of Service</a>
+      </div>
+      <div class="gap-4 flex flex-col">
+        <p class="font-semibold">Social Media</p>
+        <div class="flex gap-4">
+          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
+          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
+          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
