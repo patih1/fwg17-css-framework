@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
   <title>Document</title>
 </head>
 <body>
   
   <section class="flex ">
-    <div class="h-screen w-1/5 bg-cover bg-[url('asset/img/Login.png')]">
+    <div class="h-screen w-1/5 bg-cover bg-[url('asset/img/Login.png')] hidden md:block">
         
     </div>
 
@@ -23,18 +24,27 @@
         <h1 class="text-xl text-[#8E6447] font-semibold">Register</h1>
         <p class="font-normal text-gray-600">Fill out the form correctly</p>
       </div>
+
+      <p class="text-red-500 w-4/5 bg-slate-200 hidden" id="failed">Wrong Email or Password</p>
+      <p class="text-green-500 w-4/5 bg-slate-200 hidden" id="success">success</p>
       
-      <form class="flex flex-col w-4/5 gap-4">
+      <form class="flex flex-col w-4/5 gap-4" id="form">
 
-        <div class="flex flex-col">
-          <label class="font-semibold" for="email">Email</label>
-          <input class="h-9 border px-5 rounded" type="email" name="email" id="email" placeholder="Enter Your Email">
-        </div>
-
-        <div class="flex flex-col">
-          <label class="font-semibold" for="password">Password</label>
-          <input class="h-9 border px-5 rounded" type="password" name="password" id="password" placeholder="Enter Your Password">
-        </div>
+        <label class="flex flex-col" for="email">
+          <div class="font-semibold">Email</div>
+          <div class="flex items-center border border-slate-300">
+            <i data-feather="mail" class="w-5 ml-4"></i>
+            <input class="h-9 flex-1 px-3 rounded outline-none" type="email" name="email" id="email" placeholder="Enter Your Email">
+          </div>
+        </label>
+        
+        <label class="flex flex-col" for="password">
+          <div class="font-semibold">Password</div>
+          <div class="flex items-center border border-slate-300">
+            <i data-feather="key" class="w-5 ml-4"></i>
+            <input class="h-9 flex-1 px-3 rounded outline-none" type="password" name="password" id="password" placeholder="Enter Your Password">
+          </div>
+        </label>
 
         <div class="w-full flex justify-end">
           <a href="lupa-password.html" class="text-[#FF8906]">Lupa Password?</a>
@@ -64,5 +74,19 @@
     </div>
   </section>
 
+  <script>
+    feather.replace();
+
+    // const email = document.getElementById('email')
+    // const password = document.getElementById('password')
+
+    // const form = document.getElementById('form')
+
+    // form.addEventListener('submit', () => {
+    //   event.preventDefault()
+    //   const {value:email} = event.target.email
+    // })
+
+  </script>
 </body>
 </html>

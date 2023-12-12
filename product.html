@@ -6,22 +6,35 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <title>Document</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); 
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+      body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
 </head>
 <body>
   
-  <nav class="bg-black flex flex-col md:flex-row text-white p-4 w-full">
+  <nav id="navbar" class="flex flex-row text-white p-4 overflow-hidden w-full h-16 bg-black">
     
-    <div class="flex items-center flex-1 mx-20 gap-10">
-      <a href="" class="flex items-center gap-3"><img src="asset/Icon/Logo.svg" alt="">Coffe Shop</a>
-      <a href="index.html">Home</a>
-      <a href="product.html">Product</a>
+    <div class="flex items-center flex-1 md:mx-20 gap-10 flex-col md:flex-row">
+      <a href="" class="flex items-center gap-3 font-[Sacramento]"><img src="asset/Icon/Logo.svg" alt="">Coffe Shop</a>
+      <a href="index.html" class="">Home</a>
+      <a href="product.html" class="">Product</a>
     </div>
 
-    <div class="flex items-center flex-1 justify-end mx-20 gap-10">
-      <i data-feather="search"></i>
-      <i data-feather="shopping-cart"></i>
+    <div class="flex items-center flex-1 md:justify-end justify-start md:mx-20 gap-9 flex-col md:flex-row">
+      <div class="flex flex-col-reverse gap-14 md:flex-row">
+        <i data-feather="search" class=""></i>
+        <div class="flex gap-10">
+          <i data-feather="shopping-cart"></i>
+          <button onclick="revealMenu()"><i data-feather="menu" class="md:hidden"></i></button>
+        </div>
+      </div>
       <button class="border border-white px-5 py-2 rounded">Sign In</button>
-      <button class="border border-orange-500 bg-orange-500 px-5 py-2 rounded text-black">Sign Up</button>
+      <button class="border border-[#FF8906] bg-[#FF8906] px-5 py-2 rounded text-black">Sign Up</button>
     </div>
   </nav>
 
@@ -31,10 +44,10 @@
 
   <section class="flex flex-col gap-8 items-center mt-7">
     <div class="flex justify-between w-4/5">
-      <h3 class="text-5xl">Today <span class="text-amber-100">Promo</span></h3>
+      <h3 class="text-5xl">Today <span class="text-[#8E6447]">Promo</span></h3>
       <div class="flex gap-3">
         <button class="w-10 h-10 bg-slate-500 rounded-full flex justify-center items-center"><i data-feather="arrow-left" class="text-white"></i></button>
-        <button class="w-10 h-10 bg-orange-500 rounded-full flex justify-center items-center"><i data-feather="arrow-right" class="text-white"></i></button>
+        <button class="w-10 h-10 bg-[#FF8906] rounded-full flex justify-center items-center"><i data-feather="arrow-right" class="text-white"></i></button>
       </div>
     </div>
 
@@ -83,7 +96,7 @@
     </div>
 
     <div class="flex items-center gap-3 w-4/5">
-      <div class="w-7 h-2 bg-orange-500 rounded-full"></div>
+      <div class="w-7 h-2 bg-[#FF8906] rounded-full"></div>
       <div class="h-2 w-2 bg-slate-500 rounded-full"></div>
       <div class="h-2 w-2 bg-slate-500 rounded-full"></div>
       <div class="h-2 w-2 bg-slate-500 rounded-full"></div>
@@ -92,7 +105,7 @@
 
   <section class="flex flex-col items-center mt-7 gap-7">
     <div class="w-4/5 text-5xl">
-      Our <span class="text-amber-100">Product</span>
+      Our <span class="text-[#8E6447]">Product</span>
     </div>
 
     <div class="flex w-full">
@@ -149,7 +162,7 @@
                 </div>
                 <label for="range-price">Range Price</label>
                 <input type="range" name="range-price" id="range-price">
-                <button class="w-full bg-orange-500 h-9" type="submit">Apply FIlter</button>
+                <button class="w-full bg-[#FF8906] h-9" type="submit">Apply FIlter</button>
               </form>
 
         </div>
@@ -162,7 +175,7 @@
           <div class="flex justify-between w-full">
   
             <div class="bg-[url(asset/img/card1.png)] h-[360px] w-[377px] bg-cover bg-center flex justify-center items-center">
-              <div class="absolute w-32 h-10 bg-red-500 mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+              <div class="absolute w-32 h-10 bg-[#D00000] mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
       
               <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
                 <div class="w-11/12">
@@ -174,22 +187,22 @@
       
                 <div class="w-11/12 flex gap-3 items-center">
                   <div>
-                    <p class="text-red-500 line-through">IDR 20.000</p>
+                    <p class="text-[#D00000] line-through">IDR 20.000</p>
                   </div>
                   <div>
-                    <p class="text-2xl text-orange-500">IDR 20.000</p>
+                    <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
                   </div>
                 </div>
                 
                 <div class="w-11/12 h-1/6 flex gap-[5%]">
-                  <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-                  <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+                  <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+                  <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
                 </div>
               </div>
             </div>
       
             <div class="bg-[url(asset/img/card2.png)] h-[360px] w-[377px] bg-cover bg-center flex justify-center items-center">
-              <div class="absolute w-32 h-10 bg-red-500 mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+              <div class="absolute w-32 h-10 bg-[#D00000] mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
       
               <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
                 <div class="w-11/12">
@@ -201,16 +214,16 @@
       
                 <div class="w-11/12 flex gap-3 items-center">
                   <div>
-                    <p class="text-red-500 line-through">IDR 20.000</p>
+                    <p class="text-[#D00000] line-through">IDR 20.000</p>
                   </div>
                   <div>
-                    <p class="text-2xl text-orange-500">IDR 20.000</p>
+                    <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
                   </div>
                 </div>
       
                 <div class="w-11/12 h-1/6 flex gap-[5%]">
-                  <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-                  <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+                  <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+                  <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
                 </div>
               </div>
             </div>
@@ -219,7 +232,7 @@
           <div class="flex justify-between w-full">
   
             <div class="bg-[url(asset/img/card1.png)] h-[360px] w-[377px] bg-cover bg-center flex justify-center items-center">
-              <div class="absolute w-32 h-10 bg-red-500 mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+              <div class="absolute w-32 h-10 bg-[#D00000] mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
       
               <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
                 <div class="w-11/12">
@@ -231,22 +244,22 @@
       
                 <div class="w-11/12 flex gap-3 items-center">
                   <div>
-                    <p class="text-red-500 line-through">IDR 20.000</p>
+                    <p class="text-[#D00000] line-through">IDR 20.000</p>
                   </div>
                   <div>
-                    <p class="text-2xl text-orange-500">IDR 20.000</p>
+                    <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
                   </div>
                 </div>
                 
                 <div class="w-11/12 h-1/6 flex gap-[5%]">
-                  <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-                  <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+                  <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+                  <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
                 </div>
               </div>
             </div>
       
             <div class="bg-[url(asset/img/card2.png)] h-[360px] w-[377px] bg-cover bg-center flex justify-center items-center">
-              <div class="absolute w-32 h-10 bg-red-500 mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+              <div class="absolute w-32 h-10 bg-[#D00000] mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
       
               <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
                 <div class="w-11/12">
@@ -258,16 +271,16 @@
       
                 <div class="w-11/12 flex gap-3 items-center">
                   <div>
-                    <p class="text-red-500 line-through">IDR 20.000</p>
+                    <p class="text-[#D00000] line-through">IDR 20.000</p>
                   </div>
                   <div>
-                    <p class="text-2xl text-orange-500">IDR 20.000</p>
+                    <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
                   </div>
                 </div>
       
                 <div class="w-11/12 h-1/6 flex gap-[5%]">
-                  <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-                  <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+                  <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+                  <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
                 </div>
               </div>
             </div>
@@ -276,7 +289,7 @@
           <div class="flex justify-between w-full">
   
             <div class="bg-[url(asset/img/card1.png)] h-[360px] w-[377px] bg-cover bg-center flex justify-center items-center">
-              <div class="absolute w-32 h-10 bg-red-500 mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+              <div class="absolute w-32 h-10 bg-[#D00000] mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
       
               <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
                 <div class="w-11/12">
@@ -288,22 +301,22 @@
       
                 <div class="w-11/12 flex gap-3 items-center">
                   <div>
-                    <p class="text-red-500 line-through">IDR 20.000</p>
+                    <p class="text-[#D00000] line-through">IDR 20.000</p>
                   </div>
                   <div>
-                    <p class="text-2xl text-orange-500">IDR 20.000</p>
+                    <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
                   </div>
                 </div>
                 
                 <div class="w-11/12 h-1/6 flex gap-[5%]">
-                  <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-                  <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+                  <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+                  <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
                 </div>
               </div>
             </div>
       
             <div class="bg-[url(asset/img/card2.png)] h-[360px] w-[377px] bg-cover bg-center flex justify-center items-center">
-              <div class="absolute w-32 h-10 bg-red-500 mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
+              <div class="absolute w-32 h-10 bg-[#D00000] mb-72 mr-72 ml-20 rounded-full flex items-center justify-center text-white">FLASH SALE!</div>
       
               <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
                 <div class="w-11/12">
@@ -315,27 +328,27 @@
       
                 <div class="w-11/12 flex gap-3 items-center">
                   <div>
-                    <p class="text-red-500 line-through">IDR 20.000</p>
+                    <p class="text-[#D00000] line-through">IDR 20.000</p>
                   </div>
                   <div>
-                    <p class="text-2xl text-orange-500">IDR 20.000</p>
+                    <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
                   </div>
                 </div>
       
                 <div class="w-11/12 h-1/6 flex gap-[5%]">
-                  <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-                  <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+                  <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+                  <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
                 </div>
               </div>
             </div>
           </div>
  
           <div class="flex gap-3 w-full justify-center">
-            <button class="w-10 h-10 bg-orange-500 rounded-full">1</button>
+            <button class="w-10 h-10 bg-[#FF8906] rounded-full">1</button>
             <button class="w-10 h-10 bg-[#F8F8F8] rounded-full">2</button>
             <button class="w-10 h-10 bg-[#F8F8F8] rounded-full">3</button>
             <button class="w-10 h-10 bg-[#F8F8F8] rounded-full">4</button>
-            <button class="w-10 h-10 bg-orange-500 rounded-full flex justify-center items-center"><i data-feather="arrow-right" class="text-white"></i></button>
+            <button class="w-10 h-10 bg-[#FF8906] rounded-full flex justify-center items-center"><i data-feather="arrow-right" class="text-white"></i></button>
           </div>
     
         </div>
@@ -345,47 +358,57 @@
     </div>
   </section>
 
-  <footer class="h-auto mt-20 py-4 px-28 bg-[#F8F8F8]">
-    <div class="w-4/5 h-auto my-20 flex gap-20">
+  <footer class="h-auto mt-20 py-4 md:px-28 px-3 bg-[#F8F8F8]">
+    <div class="h-auto md:my-20 flex gap-20 md:flex-row flex-col">
       
       <div class="flex flex-col gap-10">
-        <div class="flex items-center">
-          <img src="asset/Icon/Logo.svg" alt="">
-          <p>Coffee Shop</p>
+        <div class="flex items-center text-[#8E6447] gap-3">
+          <img src="asset/Icon/Frame.svg" alt="">
+          <p class="font-[Sacramento]">Coffee Shop</p>
         </div>
-        <p>Coffee Shop is a store that sells some good<br>meals, and especially coffee. We provide<br>high quality beans</p>
-        <p>©2020CoffeeStore</p>
+        <p>Coffee Shop is a store that sells some good<br class="md:block hidden">meals, and especially coffee. We provide<br class="md:block hidden">high quality beans</p>
+        <p class="md:block hidden">©2020CoffeeStore</p>
       </div>
 
-      <div class="flex flex-col gap-4">
-        <p class="font-semibold">Product</p>
-        <a href="">Our Product</a>
-        <a href="">Pricing</a>
-        <a href="">Locations</a>
-        <a href="">Countries</a>
-        <a href="">Blog</a>
-      </div>
-      <div class="flex flex-col gap-4">
-        <p class="font-semibold">Engage</p>
-        <a href="">Partner</a>
-        <a href="">FAQ</a>
-        <a href="">About Us</a>
-        <a href="">Privacy Policy</a>
-        <a href="">Terms of Service</a>
-      </div>
-      <div class="gap-4 flex flex-col">
-        <p class="font-semibold">Social Media</p>
-        <div class="flex gap-4">
-          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
-          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
-          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
+      <div class="flex gap-14 flex-wrap">
+        <div class="flex flex-col gap-4">
+          <p class="font-semibold">Product</p>
+          <a href="">Our Product</a>
+          <a href="">Pricing</a>
+          <a href="">Locations</a>
+          <a href="">Countries</a>
+          <a href="">Blog</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <p class="font-semibold">Engage</p>
+          <a href="">Partner</a>
+          <a href="">FAQ</a>
+          <a href="">About Us</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Terms of Service</a>
+        </div>
+        <div class="gap-4 flex flex-col">
+          <p class="font-semibold">Social Media</p>
+          <div class="flex gap-4">
+            <button class="w-9 h-9 bg-[#FF8906] rounded-full flex items-center justify-center"><i data-feather="facebook"></i></button>
+            <button class="w-9 h-9 bg-[#FF8906] rounded-full flex items-center justify-center"><i data-feather="twitter"></i></button>
+            <button class="w-9 h-9 bg-[#FF8906] rounded-full flex items-center justify-center"><i data-feather="instagram"></i></button>
+          </div>
         </div>
       </div>
+      <p class="md:hidden">©2020CoffeeStore</p>
+
     </div>
   </footer>
 
   <script>
     feather.replace();
+
+    revealMenu = () => {
+      const navElement = document.getElementById("navbar");
+      navElement.classList.toggle("h-16");
+    }
+
   </script>
 </body>
 </html>

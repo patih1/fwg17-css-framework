@@ -3,25 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coffee Shop">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <title>Document</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); 
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+      body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
 </head>
 <body>
   
-  <nav class="bg-black md:bg-[rgba(1,1,1,.1)] flex flex-col md:flex-row text-white p-4 md:absolute w-full">
+  <nav id="navbar" class="bg-black md:bg-[rgba(1,1,1,.1)] flex flex-row text-white p-4 md:absolute w-full h-16">
     
-    <div class="flex items-center flex-1 mx-20 gap-10">
-      <a href="" class="flex items-center gap-3"><img src="asset/Icon/Logo.svg" alt="">Coffe Shop</a>
-      <a href="index.html">Home</a>
-      <a href="product.html">Product</a>
+    <div class="flex items-center flex-1 md:mx-20 gap-10 flex-col md:flex-row">
+      <a href="" class="flex items-center gap-3 font-[Sacramento]"><img src="asset/Icon/Logo.svg" alt="">Coffe Shop</a>
+      <a href="index.html" class="">Home</a>
+      <a href="product.html" class="">Product</a>
     </div>
 
-    <div class="flex items-center flex-1 justify-end mx-20 gap-10">
-      <i data-feather="search"></i>
-      <i data-feather="shopping-cart"></i>
+    <div class="flex items-center flex-1 md:justify-end justify-start md:mx-20 gap-9 flex-col md:flex-row">
+      <div class="flex flex-col-reverse gap-14 md:flex-row">
+        <i data-feather="search" class=""></i>
+        <div class="flex gap-10">
+          <i data-feather="shopping-cart"></i>
+          <button onclick="revealMenu()"><i data-feather="menu" class="md:hidden"></i></button>
+        </div>
+      </div>
       <button class="border border-white px-5 py-2 rounded">Sign In</button>
-      <button class="border border-orange-500 bg-orange-500 px-5 py-2 rounded text-black">Sign Up</button>
+      <button class="border border-[#FF8906] bg-[#FF8906] px-5 py-2 rounded text-black">Sign Up</button>
     </div>
   </nav>
 
@@ -33,39 +47,65 @@
 
         <h1 class="text-3xl md:text-5xl">Start Your Day with Coffee and Good Meals</h1>
         <p class="text-base">We provide high quality beans, good taste, and healthy meals made by love just for you. Start your day with us for a bigger smile!</p>
-        <button class="w-4/12 h-12 bg-orange-500 rounded">Get Started</button>
+        <button class="w-4/12 h-12 bg-[#FF8906] rounded text-black">Get Started</button>
 
         <div class="flex w-full h-20 divide-x">
           <div class="flex-1">
-            <p class="text-5xl text-orange-500">90+</p>
+            <p class="text-3xl md:text-5xl text-[#FF8906]">90+</p>
             <p class="mt-4">Staff</p>
           </div>
           <div class="flex-1 px-4">
-            <p class="text-5xl text-orange-500">30+</p>
+            <p class="text-3xl md:text-5xl text-[#FF8906]">30+</p>
             <p class="mt-4">Stores</p>
           </div>
           <div class="flex-1 px-4">
-            <p class="text-5xl text-orange-500">800+</p>
+            <p class="text-3xl md:text-5xl text-[#FF8906]">800+</p>
             <p class="mt-4">Customer</p>
           </div>
         </div>
       </div>
 
+      
     </div>
-
+    
     <div class="flex-1 bg-[url(asset/img/Header.png)] bg-cover min-h-screen">
+    </div>
+    
+    <button onclick="revealChat()" class="w-14 h-14 md:w-20 md:h-20 fixed bg-[#FF8906] rounded-full right-10 bottom-10 flex justify-center items-center"><i data-feather="message-circle" class="h-5 w-5 md:h-10 md:w-10"></i></button>
+    
+    <div id="chat" class="w-72 rounded-xl fixed h-96 bg-white right-10 bottom-32 border border-8 border-white border-t-[#FF8906] flex flex-col gap-4 hidden">
+      <div class="h-2/12 flex items-center gap-3">
+        <img class="rounded-full w-3/12" src="asset/img/cs.png" alt="">
+        <div class="flex-1">
+          <p class="font-semibold">Maria Angela</p>
+          <p class="text-[#FF8906]">Admin Support</p>
+        </div>
+      </div>
+      <hr>
+      <div class="flex items-center gap-2 text-xs">
+        <img src="asset/img/cs.png" alt="" class="w-8 h-8 rounded-full">
+        <div class="bg-[#F8F8F8] p-1 rounded-xl">Halo, Ada yang bisa kami bantu?</div>
+      </div>
+      <div class="flex items-center gap-2 text-xs justify-end">
+        <div class="bg-[#F8F8F8] p-1 rounded-xl">Saya kesulitan mencari kopi</div>
+        <img src="asset/img/user.png" alt="" class="w-8 h-8 rounded-full">
+      </div>
+      <form class="flex gap-4 mt-auto">
+        <input type="text" name="message" id="message" class="border flex-1 rounded-xl h-11 pl-3" placeholder="Masukan Pesan Anda">
+        <button type="submit" name="chat" class="h-11 w-11 flex items-center justify-center bg-[#FF8906] rounded-xl"><i data-feather="send"></i></button>
+      </form>
     </div>
   
   </header>
 
   <article class="h-[80vh] flex flex-col-reverse md:flex-row">
 
-    <div class="flex-1 flex items-center justify-center">
-      <div class="w-4/5 md:w-3/5 h-2/5 flex flex-col gap-10">
+    <div class="flex-1 flex md:items-center justify-center">
+      <div class="w-4/5 md:w-3/5 h-2/5 md:h-4/5 flex flex-col gap-10">
         
         <div class="flex items-center gap-4">
-          <div class="h-16 w-3 bg-orange-500"></div>
-          <p class="text-5xl">We Provide <span class="text-amber-100">Good Coffee </span>and <span class="text-amber-100">Healthy Meals</span></p>
+          <div class="h-16 w-3 bg-[#FF8906]"></div>
+          <p class="text-3xl md:text-5xl">We Provide <span class="text-[#8E6447]">Good Coffee </span>and <span class="text-[#8E6447]">Healthy Meals</span></p>
         </div>
 
         <div>
@@ -93,22 +133,22 @@
 
       </div>
     </div>
-    <div class="flex-1  bg-[url(asset/img/Article.png)] bg-cover">
+    <div class="flex-1  bg-[url(asset/img/Article.png)] bg-cover md:block hidden">
     </div>
 
   </article>
 
-  <section class="flex flex-col h-[80vh] flex items-center mt-20 gap-10">
+  <section class="flex flex-col md:h-[80vh] h-auto md:mb-0 mb-48 flex items-center mt-20 gap-10">
     <div class="flex flex-col items-center gap-8">
-      <p class="text-5xl">Here is People’s <span class="text-amber-100">Favorite</span></p>
-      <div class="h-1.5 w-16 bg-orange-500"></div>
-      <p class="text-slate-500">Let’s choose and have a bit taste of poeple’s favorite. It might be yours too!</p>
+      <p class="text-3xl md:text-5xl">Here is People’s <span class="text-[#8E6447]">Favorite</span></p>
+      <div class="h-1.5 w-16 bg-[#FF8906]"></div>
+      <p class="text-slate-500 text-center">Let’s choose and have a bit taste of poeple’s favorite. It might be yours too!</p>
     </div>
 
-    <div class="flex flex-col md:flex-row w-4/5 h-auto justify-between">
+    <div class="flex flex-col md:flex-row w-4/5 h-auto justify-between md:gap-0 gap-[30vh] items-center">
 
       <div class="bg-[url(asset/img/card1.png)] h-[280px] w-[268px] bg-cover bg-center flex justify-center items-center">
-        <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
+        <div class="w-11/12 h-5/6 bg-[#F8F8F8] mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
           <div class="w-11/12">
             <p class="text-2xl font-semibold">Hazelnut Latte</p>
           </div>
@@ -116,17 +156,17 @@
             <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
           </div>
           <div class="w-11/12">
-            <p class="text-2xl text-orange-500">IDR 20.000</p>
+            <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
           </div>
           <div class="w-11/12 h-1/6 flex gap-[5%]">
-            <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-            <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+            <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+            <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
           </div>
         </div>
       </div>
 
       <div class="bg-[url(asset/img/card2.png)] h-[280px] w-[268px] bg-cover bg-center flex justify-center items-center">
-        <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
+        <div class="w-11/12 h-5/6 bg-[#F8F8F8] mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
           <div class="w-11/12">
             <p class="text-2xl font-semibold">Hazelnut Latte</p>
           </div>
@@ -134,17 +174,17 @@
             <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
           </div>
           <div class="w-11/12">
-            <p class="text-2xl text-orange-500">IDR 20.000</p>
+            <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
           </div>
           <div class="w-11/12 h-1/6 flex gap-[5%]">
-            <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-            <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+            <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+            <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
           </div>
         </div>
       </div>
 
       <div class="bg-[url(asset/img/card3.png)] h-[280px] w-[268px] bg-cover bg-center flex justify-center items-center">
-        <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
+        <div class="w-11/12 h-5/6 bg-[#F8F8F8] mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
           <div class="w-11/12">
             <p class="text-2xl font-semibold">Hazelnut Latte</p>
           </div>
@@ -152,17 +192,17 @@
             <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
           </div>
           <div class="w-11/12">
-            <p class="text-2xl text-orange-500">IDR 20.000</p>
+            <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
           </div>
           <div class="w-11/12 h-1/6 flex gap-[5%]">
-            <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-            <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+            <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+            <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
           </div>
         </div>
       </div>
 
       <div class="bg-[url(asset/img/card4.jpeg)] h-[280px] w-[268px] bg-cover bg-center flex justify-center items-center">
-        <div class="w-11/12 h-5/6 bg-slate-100 mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
+        <div class="w-11/12 h-5/6 bg-[#F8F8F8] mt-[150%] bg-white flex flex-col items-center shadow-md justify-evenly">
           <div class="w-11/12">
             <p class="text-2xl font-semibold">Hazelnut Latte</p>
           </div>
@@ -170,11 +210,11 @@
             <p>You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
           </div>
           <div class="w-11/12">
-            <p class="text-2xl text-orange-500">IDR 20.000</p>
+            <p class="text-2xl text-[#FF8906]">IDR 20.000</p>
           </div>
           <div class="w-11/12 h-1/6 flex gap-[5%]">
-            <button class="w-9/12 bg-orange-500 rounded">Buy</button>
-            <button class="flex items-center justify-center border rounded border-orange-500 w-2/12"><i data-feather="shopping-cart" class="text-orange-500 w-6 h-6"></i></button>
+            <button class="w-9/12 bg-[#FF8906] rounded">Buy</button>
+            <button class="flex items-center justify-center border rounded border-[#FF8906] w-2/12"><i data-feather="shopping-cart" class="text-[#FF8906] w-6 h-6"></i></button>
           </div>
         </div>
       </div>
@@ -182,97 +222,115 @@
     </div>
   </section>
 
-  <section class="flex flex-col h-[115vh] mt-28 items-center mb-5">
+  <section class="flex flex-col md:h-[115vh] h-[70vh] mt-28 items-center mb-5">
     <div>
       <div class="flex flex-col items-center gap-8">
-        <p class="text-5xl"><span class="text-amber-100">Visit Our Store </span>Visit Our Store in the Spot on the Map Below</p>
-        <div class="h-1.5 w-16 bg-orange-500"></div>
-        <p class="text-slate-500 text-center">You can explore the menu that we provide with fun and have their<br>own taste and make your day better.</p>
+        <p class="text-3xl md:text-5xl text-center"><span class="text-[#8E6447]">Visit Our Store </span>Visit Our Store in the Spot on the Map Below</p>
+        <div class="h-1.5 w-16 bg-[#FF8906]"></div>
+        <p class="text-slate-500 text-center  mx-4">You can explore the menu that we provide with fun and have their<br class="md:block hidden">own taste and make your day better.</p>
       </div>
     </div>
 
-    <div class="w-5/6 flex-1 bg-[url(asset/img/wmap.png)] bg-cover mt-10">
+    <div class="w-full flex-1 bg-[url(asset/img/wmap.png)] bg-contain bg-no-repeat mt-10 md:bg-cover">
 
     </div>
   
   </section>
 
-  <section class="h-[70vh] flex  bg-gradient-to-b from-[#777c82] to-[#0b0909] text-white ">
-    <div class="flex flex-1 items-center justify-end h-full">
-      <div class="w-4/5 h-4/5 bg-[url(asset/img/Testimony.png)] bg-cover"></div>
+  <section class="h-[100vh] md:h-[70vh] flex md:flex-row flex-col bg-gradient-to-b from-[#777c82] to-[#0b0909] text-white">
+
+    <div class="flex md:flex-1 items-center md:justify-end justify-center md:mt-0 mt-4 h-1/3 md:h-4/5 w-full md:mt-7">
+      <div class="md:w-3/5 md:h-4/5 h-full w-4/5 bg-[url(asset/img/Testimony.png)] bg-cover"></div>
     </div>
-    <div class="flex flex-1 items-center justify-start h-full">
-      <div class="w-3/5 h-4/5 bg-cover ml-4 flex flex-col gap-6">
-        <p>TESTIMONIAL</p>
+
+    <div class="flex flex-1 items-center md:justify-start justify-center h-full">
+      <div class="w-4/5 md:3/5 h-3/4 bg-cover ml-4 flex flex-col gap-6">
+        <p class="md:block hidden">TESTIMONIAL</p>
         <div class="flex items-center">
-          <div class="h-1.5 w-16 bg-orange-500 rotate-90"></div>
-          <p class="text-5xl">Viezh Robert</p>
+          <div class="h-1.5 w-16 bg-[#FF8906] rotate-90 md:ml-0 -ml-9"></div>
+          <p class="text-3xl md:text-5xl md:ml-0 -ml-4">Viezh Robert</p>
         </div>
-        <p class="text-orange-500">Manager Coffe Shop</p>
+        <p class="text-[#FF8906]">Manager Coffe Shop</p>
         <p>“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!</p>
         <div class="flex items-center gap-4">
-          <i data-feather="star" class="text-orange-500"></i>
-          <i data-feather="star" class="text-orange-500"></i>
-          <i data-feather="star" class="text-orange-500"></i>
-          <i data-feather="star" class="text-orange-500"></i>
-          <i data-feather="star" class="text-orange-500"></i>
+          <i data-feather="star" class="text-[#FF8906]"></i>
+          <i data-feather="star" class="text-[#FF8906]"></i>
+          <i data-feather="star" class="text-[#FF8906]"></i>
+          <i data-feather="star" class="text-[#FF8906]"></i>
+          <i data-feather="star" class="text-[#FF8906]"></i>
           <p>5.0</p>
         </div>
         <div class="flex gap-3">
           <button class="w-12 h-12 bg-white rounded-full flex items-center justify-center"><i data-feather="arrow-left" class="text-slate-500"></i></button>
-          <button class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center"><i data-feather="arrow-right" class="text-slate-500"></i></button>
+          <button class="w-12 h-12 bg-[#FF8906] rounded-full flex items-center justify-center"><i data-feather="arrow-right" class="text-slate-500"></i></button>
         </div>
         <div class="flex items-center gap-3">
-          <div class="w-7 h-2 bg-orange-500 rounded-full"></div>
+          <div class="w-7 h-2 bg-[#FF8906] rounded-full"></div>
           <div class="h-2 w-2 bg-white rounded-full"></div>
           <div class="h-2 w-2 bg-white rounded-full"></div>
           <div class="h-2 w-2 bg-white rounded-full"></div>
         </div>
       </div>
     </div>
+
   </section>
 
-  <footer class="h-auto mt-20 py-4 px-28 bg-[#F8F8F8]">
-    <div class="w-4/5 h-auto my-20 flex gap-20">
+  <footer class="h-auto mt-20 py-4 md:px-28 px-3 bg-[#F8F8F8]">
+    <div class="h-auto md:my-20 flex gap-20 md:flex-row flex-col">
       
       <div class="flex flex-col gap-10">
-        <div class="flex items-center">
-          <img src="asset/Icon/Logo.svg" alt="">
-          <p>Coffee Shop</p>
+        <div class="flex items-center text-[#8E6447] gap-3">
+          <img src="asset/Icon/Frame.svg" alt="">
+          <p class="font-[Sacramento]">Coffee Shop</p>
         </div>
-        <p>Coffee Shop is a store that sells some good<br>meals, and especially coffee. We provide<br>high quality beans</p>
-        <p>©2020CoffeeStore</p>
+        <p>Coffee Shop is a store that sells some good<br class="md:block hidden">meals, and especially coffee. We provide<br class="md:block hidden">high quality beans</p>
+        <p class="md:block hidden">©2020CoffeeStore</p>
       </div>
 
-      <div class="flex flex-col gap-4">
-        <p class="font-semibold">Product</p>
-        <a href="">Our Product</a>
-        <a href="">Pricing</a>
-        <a href="">Locations</a>
-        <a href="">Countries</a>
-        <a href="">Blog</a>
-      </div>
-      <div class="flex flex-col gap-4">
-        <p class="font-semibold">Engage</p>
-        <a href="">Partner</a>
-        <a href="">FAQ</a>
-        <a href="">About Us</a>
-        <a href="">Privacy Policy</a>
-        <a href="">Terms of Service</a>
-      </div>
-      <div class="gap-4 flex flex-col">
-        <p class="font-semibold">Social Media</p>
-        <div class="flex gap-4">
-          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
-          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
-          <button class="w-8 h-8 bg-orange-500 rounded-full"></button>
+      <div class="flex gap-14 flex-wrap">
+        <div class="flex flex-col gap-4">
+          <p class="font-semibold">Product</p>
+          <a href="">Our Product</a>
+          <a href="">Pricing</a>
+          <a href="">Locations</a>
+          <a href="">Countries</a>
+          <a href="">Blog</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <p class="font-semibold">Engage</p>
+          <a href="">Partner</a>
+          <a href="">FAQ</a>
+          <a href="">About Us</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Terms of Service</a>
+        </div>
+        <div class="gap-4 flex flex-col">
+          <p class="font-semibold">Social Media</p>
+          <div class="flex gap-4">
+            <button class="w-9 h-9 bg-[#FF8906] rounded-full flex items-center justify-center"><i data-feather="facebook"></i></button>
+            <button class="w-9 h-9 bg-[#FF8906] rounded-full flex items-center justify-center"><i data-feather="twitter"></i></button>
+            <button class="w-9 h-9 bg-[#FF8906] rounded-full flex items-center justify-center"><i data-feather="instagram"></i></button>
+          </div>
         </div>
       </div>
+      <p class="md:hidden">©2020CoffeeStore</p>
+
     </div>
   </footer>
 
   <script>
     feather.replace();
+
+  revealMenu = () => {
+    const navElement = document.getElementById("navbar");
+    navElement.classList.toggle("h-16");
+  }
+
+  revealChat = () => {
+    const chatElement = document.getElementById("chat");
+    chatElement.classList.toggle("hidden");
+  }
+
   </script>
 </body>
 </html>
